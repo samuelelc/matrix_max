@@ -10,10 +10,10 @@ void print_matrix_and_maxrow(int rows, int cols, int mat[][cols], int array_max[
 int main(int argc, char const *argv[])
 {
 	int mat[ROWS][COLS]={{2,5,3,9},{55,7,3,6},{2,22,3,5}};
-	int *min_of_max;
-	int *max_of_rows = function_01(ROWS, COLS, mat, min_of_max);
+	int min_of_max;
+	int *max_of_rows = function_01(ROWS, COLS, mat, &min_of_max);
 	print_matrix_and_maxrow(ROWS, COLS, mat, max_of_rows);
-	printf("\nIl valore minimo tra i valori massimi e': %d", *min_of_max);
+	printf("\nIl valore minimo tra i valori massimi e': %d", min_of_max);
 	return 0;
 }
 
